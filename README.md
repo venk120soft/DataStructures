@@ -52,7 +52,7 @@ List<int> numbers = new List<int>() { 1, 2, 5, 7, 8, 10 };
 Console.WriteLine(numbers[0]); // prints 1
 Console.WriteLine(numbers[1]); // prints 2
 ```
-- LinkedList: is having Data, previous pointer and next pointer for the Next element. it is a doubly linked list. and it is strongly typed Add/Remove will be easy O(1). but retrival takes long time as it has to go through all the elements
+- LinkedList: LinkedList will be formed with the list of nodes. Each node have Data, address of previous node and adrress of next next node. it is a doubly linked list. and it is strongly typed Add/Remove will be easy O(1). but retrival takes long time as it has to go through all the elements
 ```javascript
 LinkedList<string> sentence = new LinkedList<string>(words);
 sentence.AddFirst("today");
