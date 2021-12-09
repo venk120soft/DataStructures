@@ -8,11 +8,11 @@ Different ways of storing data in computer. A data structure is a particular way
 ## Types of Datastructures
 - Array
 - Linked List
+- Stack (LIFO)
+- Queue (FIFO)
 - HashTable
 - HashMap
 - Heap
-- Stack (LIFO)
-- Queue (FIFO)
 - Tree
 - Graph
 
@@ -68,9 +68,20 @@ Arrays have below operations:
 - shift => delete element from start of an array. which first element
 
 => Stack is Last In First Out (LIFO) => last element is the first to pop out. we can use push and pop operations
+- push => add new element to end of stack 
+- pop => remove element from end of stack and return it
+- top => return top element of a stack  after pop out the element 
 
 Best example is: stacking the plates one on other. ex2: reverse string, ex3: Balanced paranthesis
 
 => Queue is First in First Out (FIFO) => first element is the first to pop out. we can use push and shift operations
+- enqueue => Add new element to the end of queue
+- dequeue => remove element from starting of the queue
+- getFrontElement => after removal get the first element in queue
 
 Best example is: queue line infront of shopping mall, ex2: find binary value of a given number
+
+## Hashtable
+Hashtable data structure having the key and value pair with hash function. This is similar to the Object.
+
+[implementation](./hashtable.js)
