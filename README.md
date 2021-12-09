@@ -1,4 +1,6 @@
 # DataStructures
+- Javascript all methods will start with small letter ex: 'Hello'.length
+- C# all mthods will start with capital letter ex: 'Hello'.Length
 
 ### What is Datastructure?
 Different ways of storing data in computer. A data structure is a particular way of organizing data in a computer so that it can be used effectively
@@ -9,8 +11,8 @@ Different ways of storing data in computer. A data structure is a particular way
 - HashTable
 - HashMap
 - Heap
-- Stack
-- Queue
+- Stack (LIFO)
+- Queue (FIFO)
 - Tree
 - Graph
 
@@ -57,3 +59,18 @@ Console.WriteLine(numbers[1]); // prints 2
 LinkedList<string> sentence = new LinkedList<string>(words);
 sentence.AddFirst("today");
 ```
+
+## Stack(LIFO) and Queue(FIFO) can be easily implemented using the Arrays
+
+Arrays have below operations:
+- push => add new element to end of an array
+- pop => delete element from an end of an array
+- shift => delete element from start of an array. which first element
+
+=> Stack is Last In First Out (LIFO) => last element is the first to pop out. we can use push and pop operations
+
+Best example is: stacking the plates one on other. ex2: reverse string, ex3: Balanced paranthesis
+
+=> Queue is First in First Out (FIFO) => first element is the first to pop out. we can use push and shift operations
+
+Best example is: queue line infront of shopping mall, ex2: find binary value of a given number
