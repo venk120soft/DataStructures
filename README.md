@@ -92,7 +92,9 @@ A Hash Table transforms a key into an integer index using a hash function, and t
 - Hashtable is not generic hence while accessing the elements we need to do type casting
 - If the key is not found in HashTable it will return undefined(in javascript) and null (in C#)
 
-In Short: Hashfunction help us to generate the uniq index (by using ASCII values) then we convert key and value as an array and pass this as value and uniqIndex as a Key
+#### In Short: Its a technique to convert a range of key values into a range of indexes of an array. 
+
+Hashfunction help us to generate the uniq index (by using ASCII values) then we convert key and value as an array and pass this as value and uniqIndex as a Key.
 ```javascript
 const hashTable =  {
       uniqIndex:[key, vlaue],
