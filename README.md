@@ -82,6 +82,9 @@ Best example is: stacking the plates one on other. ex2: reverse string, ex3: Bal
 Best example is: queue line infront of shopping mall, ex2: find binary value of a given number
 
 ## Hashtable
-Hashtable data structure having the key and value pair with hash function. This is similar to the Object.
+Hashtable data structure having the key and value pair with hash function. This is similar to the Object. We can implement the Hashtable using Object in Javascript but there are some caveats with this approach like we can overwrite the default properties defined for the object hence it is not the right way of implementation
 
-[implementation](./hashtable.js)
+For this Reason, javacript have another [implementation](./hashtable.js) of hashTable with Map. 
+
+A Hash Table transforms a key into an integer index using a hash function, and the index will decide where to store the key/value pair in memory:
+[more info](https://www.freecodecamp.org/news/javascript-hash-table-associative-array-hashing-in-js/)
