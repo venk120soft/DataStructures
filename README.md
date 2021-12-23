@@ -1,6 +1,6 @@
 # DataStructures
-- Javascript all methods will start with small letter ex: 'Hello'.length
-- C# all mthods will start with capital letter ex: 'Hello'.Length
+- Javascript all methods will start with small letter ex: **'Hello'.length**
+- C# all mthods will start with capital letter ex: **'Hello'.Length** [Icons used in Visual stuio for different types](https://docs.microsoft.com/en-us/visualstudio/ide/class-view-and-object-browser-icons?view=vs-2022)
 
 ### What is Datastructure?
 Different ways of storing data in computer. A data structure is a particular way of organizing data in a computer so that it can be used effectively
@@ -67,14 +67,14 @@ Arrays have below operations:
 - pop => delete element from an end of an array
 - shift => delete element from start of an array. which first element
 
-=> Stack is Last In First Out (LIFO) => last element is the first to pop out. we can use push and pop operations
+#### => Stack is Last In First Out (LIFO) => last element is the first to pop out. we can use push and pop operations
 - push => add new element to end of stack 
 - pop => remove element from end of stack and return it
 - top => return top element of a stack  after pop out the element 
 
 Best example is: stacking the plates one on other. ex2: reverse string, ex3: Balanced paranthesis
 
-=> Queue is First in First Out (FIFO) => first element is the first to pop out. we can use push and shift operations
+#### => Queue is First in First Out (FIFO) => first element is the first to pop out. we can use push and shift operations
 - enqueue => Add new element to the end of queue
 - dequeue => remove element from starting of the queue
 - getFrontElement => after removal get the first element in queue
