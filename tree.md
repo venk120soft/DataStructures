@@ -35,6 +35,8 @@ keys − Key represents a value of a node based on which a search operation is t
 ### Full Binary Tree vs Complete Binary Tree
 From the above image we can say that it is full binary tree with the height of 3 (level o, 1, 2) and complete binary tree with the height of 4 (level 0, 1, 2, 3)
 
+All Full Binary trees are complete Binary trees but all complete Binary tress are not Full Binary trees.
+
 All Binary search trees are complete binary trees
 
 ## Binary search Tree
