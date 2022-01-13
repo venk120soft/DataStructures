@@ -41,12 +41,11 @@ myAL.Add("Hello");
 myAL.Add(2.5);
 myAL.Add(123);
 Console.WriteLine((string)myAL[0]); // 'Hello'
-var arlist = new ArrayList(){ 1, "Bill", 300, 4.5f };
 
+var arlist = new ArrayList(){ 1, "Bill", 300, 4.5f };
 //Access individual item using indexer
 int firstElement = (int) arlist[0]; //returns 1
 string secondElement = (string) arlist[1]; //returns "Bill"
-}
 ```
 - List: is implemented on top of the ArrayList. it is strongly typed objects so, on retrival typecasting is not required.  retrive will be O(1) and add/remove needs to shift all the elements.
 ```javascript
@@ -54,18 +53,18 @@ List<int> numbers = new List<int>() { 1, 2, 5, 7, 8, 10 };
 Console.WriteLine(numbers[0]); // prints 1
 Console.WriteLine(numbers[1]); // prints 2
 ```
-- LinkedList: LinkedList will be formed with the list of nodes. Each node have Data, address of previous node and adrress of next next node. it is a doubly linked list. and it is strongly typed Add/Remove will be easy O(1). but retrival takes long time as it has to go through all the elements
+- LinkedList: LinkedList will be formed with the list of nodes. Each node have Data and address of previous node then it is called single Linked list and If it also has adrress of next node then it is a doubly linked list.
+- it is strongly typed Add/Remove will be easy with O(1). but retrival takes long time as it has to go through all the elements
 ```javascript
 LinkedList<string> sentence = new LinkedList<string>(words);
 sentence.AddFirst("today");
 ```
 
 ## Stack(LIFO) and Queue(FIFO) can be easily implemented using the Arrays
-
 Arrays have below operations:
 - push => add new element to end of an array
 - pop => delete element from an end of an array
-- shift => delete element from start of an array. which first element
+- shift => delete element from start of an array. which is first element in an array
 
 #### => Stack is Last In First Out (LIFO) => last element is the first to pop out. we can use push and pop operations
 - push => add new element to end of stack 
