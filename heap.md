@@ -60,3 +60,306 @@ Time complexity for Insertion and Deletion is from O(1) to O(log n) and the Heig
 
   All the opearions will be same but the proirity will be Minimum numnber [For Image](https://www.geeksforgeeks.org/heap-data-structure/)
 
+# Binary Heap implementation in JS
+```javascript
+class BinaryHeap{
+  constructor(){
+    this.list = [];
+  }
+  
+  //Heapify
+  maxHeapify = (arr, n, i) => {
+    let largest = i;
+    let l = 2 * i + 1; //left child index
+    let r = 2 * i + 2; //right child index
+
+    //If left child is smaller than root
+     if (l < n && arr[l] > arr[largest]) {
+           largest = l; 
+     }
+
+     // If right child is smaller than smallest so far 
+     if (r < n && arr[r] > arr[largest]) {
+          largest = r; 
+     }
+
+     // If smallest is not root 
+     if (largest != i) { 
+          let temp = arr[i]; 
+          arr[i] = arr[largest]; 
+          arr[largest] = temp; 
+
+        // Recursively heapify the affected sub-tree 
+        this.maxHeapify(arr, n, largest); 
+      } 
+  }
+  
+  //Insert Value
+  insert = (num) => {
+    const size = this.list.length;
+    if(size === 0){
+      this.list.push(num);
+    }else{
+      this.list.push(num);
+      
+      //Heapify
+      for (let i = parseInt(this.list.length / 2 - 1); i >= 0; i--) {
+         this.maxHeapify(this.list, this.list.length, i); 
+      }
+    }
+  }
+  
+  //Remove value
+  delete = (num) => {
+    const size = this.list.length;
+    
+    //Get the index of the number to be removed
+    let i;
+    for(i = 0; i < size; i++){
+      if(num === this.list[i]){
+        break;
+      }
+    }
+    
+    //Swap the number with last element
+    [this.list[i], this.list[size - 1]] = [this.list[size - 1], this.list[i]];
+    
+    //Remove the last element
+    this.list.splice(size - 1);
+    
+    //Heapify the list again
+    for (let i = parseInt(this.list.length / 2 - 1); i >= 0; i--) {
+         this.maxHeapify(this.list, this.list.length, i); 
+     }
+  }
+  
+  //Return max value
+  findMax = () => this.list[0];
+  
+  //Remove max val
+  deleteMax = () => {
+    this.delete(this.list[0]);
+  }
+  
+  //Remove and return max value
+  extractMax = () => {
+    const max = this.list[0];
+    this.delete(max);
+    return max;
+  }
+  
+  //Size
+  size = () => this.list.length;
+  
+  //IsEmpty
+  isEmpty = () => this.list.length === 0;
+  
+  //Return head
+  getList = () => this.list;
+  
+  
+  // Min Heapify
+   //Heapify
+  this.minHeapify = (arr, n, i) => {
+    let smallest = i;
+    let l = 2 * i + 1; //left child index
+    let r = 2 * i + 2; //right child index
+
+    //If left child is smaller than root
+     if (l < n && arr[l] < arr[smallest]) {
+           smallest = l; 
+     }
+
+     // If right child is smaller than smallest so far 
+     if (r < n && arr[r] < arr[smallest]) {
+          smallest = r; 
+     }
+
+     // If smallest is not root 
+     if (smallest != i) { 
+          let temp = arr[i]; 
+          arr[i] = arr[smallest]; 
+          arr[smallest] = temp; 
+
+        // Recursively heapify the affected sub-tree 
+        this.minHeapify(arr, n, smallest); 
+      } 
+  }
+}
+```
+// Driver code
+```
+Input:
+const heap = new BinaryHeap();
+heap.insert(3);
+heap.insert(4);
+heap.insert(9);
+heap.insert(5);
+heap.insert(2);
+
+console.log(heap.getList());
+
+heap.delete(9);
+console.log(heap.getList());
+
+heap.insert(7);
+console.log(heap.getList());
+
+Output:
+[2, 3, 9, 5, 4]
+[2, 3, 4, 5]
+[2, 3, 4, 5, 7]
+```
+# C# Solution
+```
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ProblemSolving
+{
+    class Heap
+    {
+        MinHeap minHeap = new MinHeap(5);
+    }
+
+    public class MinHeap
+    {
+        private readonly int[] _elements;
+        private int _size;
+
+        public MinHeap(int size)
+        {
+            _elements = new int[size];
+        }
+
+        private int GetLeftChildIndex(int elementIndex) => 2 * elementIndex + 1;
+        private int GetRightChildIndex(int elementIndex) => 2 * elementIndex + 2;
+        private int GetParentIndex(int elementIndex) => (elementIndex - 1) / 2;
+
+        private bool HasLeftChild(int elementIndex) => GetLeftChildIndex(elementIndex) < _size;
+        private bool HasRightChild(int elementIndex) => GetRightChildIndex(elementIndex) < _size;
+        private bool IsRoot(int elementIndex) => elementIndex == 0;
+
+        private int GetLeftChild(int elementIndex) => _elements[GetLeftChildIndex(elementIndex)];
+        private int GetRightChild(int elementIndex) => _elements[GetRightChildIndex(elementIndex)];
+        private int GetParent(int elementIndex) => _elements[GetParentIndex(elementIndex)];
+
+        private void Swap(int firstIndex, int secondIndex)
+        {
+            var temp = _elements[firstIndex];
+            _elements[firstIndex] = _elements[secondIndex];
+            _elements[secondIndex] = temp;
+        }
+
+        public bool IsEmpty()
+        {
+            return _size == 0;
+        }
+
+        public int Peek()
+        {
+            if (_size == 0)
+                throw new IndexOutOfRangeException();
+
+            return _elements[0];
+        }
+
+        public int Pop()
+        {
+            if (_size == 0)
+                throw new IndexOutOfRangeException();
+
+            var result = _elements[0];
+            _elements[0] = _elements[_size - 1];
+            _size--;
+
+            ReCalculateDown();
+
+            return result;
+        }
+
+        public void Add(int element)
+        {
+            if (_size == _elements.Length)
+                throw new IndexOutOfRangeException();
+
+            _elements[_size] = element;
+            _size++;
+
+            ReCalculateUp();
+        }
+
+        private void ReCalculateDown()
+        {
+            int index = 0;
+            while (HasLeftChild(index))
+            {
+                var smallerIndex = GetLeftChildIndex(index);
+                if (HasRightChild(index) && GetRightChild(index) < GetLeftChild(index))
+                {
+                    smallerIndex = GetRightChildIndex(index);
+                }
+
+                if (_elements[smallerIndex] >= _elements[index])
+                {
+                    break;
+                }
+
+                Swap(smallerIndex, index);
+                index = smallerIndex;
+            }
+        }
+
+        private void ReCalculateUp()
+        {
+            var index = _size - 1;
+            while (!IsRoot(index) && _elements[index] < GetParent(index))
+            {
+                var parentIndex = GetParentIndex(index);
+                Swap(parentIndex, index);
+                index = parentIndex;
+            }
+        }
+
+        /*
+         *For Max Heap We just need to modify these 2 methods 
+         */
+
+         /*
+        private void ReCalculateDown()
+        {
+            int index = 0;
+            while (HasLeftChild(index))
+            {
+                var biggerIndex = GetLeftChildIndex(index);
+                if (HasRightChild(index) && GetRightChild(index) > GetLeftChild(index))
+                {
+                    biggerIndex = GetRightChildIndex(index);
+                }
+
+                if (_elements[biggerIndex] < _elements[index])
+                {
+                    break;
+                }
+
+                Swap(biggerIndex, index);
+                index = biggerIndex;
+            }
+        }
+
+        private void ReCalculateUp()
+        {
+            var index = _size - 1;
+            while (!IsRoot(index) && _elements[index] > GetParent(index))
+            {
+                var parentIndex = GetParentIndex(index);
+                Swap(parentIndex, index);
+                index = parentIndex;
+            }
+        }
+        */
+    }
+}
+
+```
