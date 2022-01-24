@@ -2,6 +2,53 @@
 - Javascript all methods will start with small letter ex: **'Hello'.length**
 - C# all mthods will start with capital letter ex: **'Hello'.Length** [Icons used in Visual stuio for different types](https://docs.microsoft.com/en-us/visualstudio/ide/class-view-and-object-browser-icons?view=vs-2022)
 
+# Instructions Before go to the solutioning
+Do not solve the problem until you understand correctly.
+Do not go with your assumptions. Do not hesitate to ask your interviewer questions about the problem,
+to make sure what you understand, reiterate the question to the interviewer what your understandings are.
+
+Start with an example to solidify your understandings:Once you understand the question, you should always try an example, these examples may lead to insights on how to solve the problem or this brings to light any remaining misunderstandings that you have.
+
+These examples are useful when you don't see the solution right away.
+
+On start solving the problem, keep talking! Always explain what you are doing on each step
+
+This process may take long time to solve the problem, you may be tempted to begin the coding before you figure out how to solve the problem, resist this temptation.
+
+**Note:** Its a good practice to think before coding and write the error free code, rather than several mistakes by writing hurry code and doesn't have any idea where he is going. i.e you have to write an algorithm or pseudo code before start writing actual code.
+
+Write your best code, it is the platform for showing your abilities and way of writing the code. Respond well to the hints given by the interviewer.
+
+- Take one input and walk through the code you wrote, this helps you identify the bugs in your code. you can do this step before asked by the interviewer also.
+- Try writing the neat code with the tabs and formatting correctly.
+- Try avoiding syntax errors
+- Finally, make sure you code handles all edge cases (like 0, null, undefined, empty list) 
+
+Many of the problems asked by the interviewer, requires using tricks or uncommonly used features of language
+
+**When you get Stuck:** 
+Interviewers want to see how you respond when you don't recognize the answer to a question immediately. The worst thing is give up or get frustrated, Instead show interest in the problem and keep trying to solve it.When all else fails go back to the example and try performing the task and try analyzing what you doing. Then try extending from your specific example to general case. you may have to use very detailed examples. this is Ok. Another fallback option is to try using a different data structure to implement, look for a more similar data structure, and use it. using the right data structure often makes the problem much easier.
+You should also consider less commonly used or most advanced aspects of a language, this includes bit operators, complex point casting, union types
+
+**What to learn:**
+The correct solutions are short rarely 15 and never more than 30 lines of code.If you start writing lots of code means its a warning, that you are heading to the wrong direction.
+Know how arithmetic and logical operator works
+try using one over other example equality check without using =. you can use the logical operator like ^
+
+How hash table different from binary search tree
+
+To check myName variable is not ( null or false or 0 or undefined )you can simply write 
+      
+      if(myName) // this is a better way to use and the new way of checking
+
+instead of checking like if(myName != null)
+and mention that but both are the same.
+
+### Big-O Notation:
+1) Figure out what the input is and what n represents
+2) Express the number of operations the algorithm performs in terms of n
+3) Eliminate all but the highest order terms.4) Remove all constant factors
+
 ### What is Datastructure?
 Different ways of storing data in computer. A data structure is a particular way of organizing data in a computer so that it can be used effectively
 
