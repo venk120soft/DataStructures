@@ -1,6 +1,7 @@
 # DataStructures
 - Javascript all methods will start with small letter ex: **'Hello'.length**
-- C# all mthods will start with capital letter ex: **'Hello'.Length** [Icons used in Visual stuio for different types](https://docs.microsoft.com/en-us/visualstudio/ide/class-view-and-object-browser-icons?view=vs-2022)
+- C# all mthods will start with capital letter ex: **'Hello'.Length** [Icons used in Visual Studio for different types like method, property, etc](https://docs.microsoft.com/en-us/visualstudio/ide/class-view-and-object-browser-icons?view=vs-2022)
+- [Front end system design](https://github.com/devkodeio/frontend-system-design) same is added in [local repo](./SystemDesign-FrontEnd.pdf)
 
 # Instructions Before go to the solutioning
 Do not solve the problem until you understand correctly.
