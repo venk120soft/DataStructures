@@ -69,29 +69,29 @@ class BinaryHeap{
   }
   
   //Heapify
-  maxHeapify = (arr, n, i) => {
-    let largest = i;
-    let l = 2 * i + 1; //left child index
-    let r = 2 * i + 2; //right child index
+  maxHeapify = (arr, arrLength, elementIndex) => {
+    let largest = elementIndex;
+    let leftChildIndex = 2 * elementIndex + 1; //left child index
+    let rightChildIndex = 2 * elementIndex + 2; //right child index
 
     //If left child is smaller than root
-     if (l < n && arr[l] > arr[largest]) {
-           largest = l; 
+     if (leftChildIndex < arrLength && arr[leftChildIndex] > arr[largest]) {
+           largest = leftChildIndex; 
      }
 
      // If right child is smaller than smallest so far 
-     if (r < n && arr[r] > arr[largest]) {
-          largest = r; 
+     if (rightChildIndex < arrLength && arr[rightChildIndex] > arr[largest]) {
+          largest = rightChildIndex; 
      }
 
      // If smallest is not root 
-     if (largest != i) { 
-          let temp = arr[i]; 
-          arr[i] = arr[largest]; 
+     if (largest !== elementIndex) { 
+          let temp = arr[elementIndex]; 
+          arr[elementIndex] = arr[largest]; 
           arr[largest] = temp; 
 
         // Recursively heapify the affected sub-tree 
-        this.maxHeapify(arr, n, largest); 
+        this.maxHeapify(arr, arrLength, largest); 
       } 
   }
   
@@ -161,32 +161,31 @@ class BinaryHeap{
   
   // Min Heapify
    //Heapify
-  this.minHeapify = (arr, n, i) => {
-    let smallest = i;
-    let l = 2 * i + 1; //left child index
-    let r = 2 * i + 2; //right child index
+   this.minHeapify = (arr, arrLength, elementIndex) => {
+    let smallest = elementIndex;
+    let leftChildIndex = 2 * elementIndex + 1; //left child index
+    let rightChildIndex = 2 * elementIndex + 2; //right child index
 
     //If left child is smaller than root
-     if (l < n && arr[l] < arr[smallest]) {
-           smallest = l; 
+     if (leftChildIndex < arrLength && arr[leftChildIndex] < arr[smallest]) {
+           smallest = leftChildIndex; 
      }
 
      // If right child is smaller than smallest so far 
-     if (r < n && arr[r] < arr[smallest]) {
-          smallest = r; 
+     if (rightChildIndex < arrLength && arr[rightChildIndex] < arr[smallest]) {
+          smallest = rightChildIndex; 
      }
 
      // If smallest is not root 
-     if (smallest != i) { 
-          let temp = arr[i]; 
-          arr[i] = arr[smallest]; 
+     if (smallest != elementIndex) { 
+          let temp = arr[elementIndex]; 
+          arr[elementIndex] = arr[smallest]; 
           arr[smallest] = temp; 
 
         // Recursively heapify the affected sub-tree 
-        this.minHeapify(arr, n, smallest); 
+        this.minHeapify(arr, arrLength, smallest); 
       } 
   }
-}
 ```
 // Driver code
 ```
