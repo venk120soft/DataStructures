@@ -15,9 +15,10 @@ Ex:
 | If a parent is at Index      | (mod of i/2)       |  mod of 2.5 = 2   | (mod of i-1/2)                  | 
 
 ## Consider below to Implement Max Heap
-Apples are arranged in the Market one top of other which
+Apples are arranged in the shop in Market one top of other in which good and attractive apple will be top of all the apples to attract the customers. 
 
-Time complexity for Insertion and Deletion is from O(1) to O(log n) and the Height of the Tree is 2^(h+1). For creating the Heap time complexity is O(n logn)
+Time complexity for Insertion and Deletion is from O(1) to O(log n) and the Height of the Tree is 2^(h+1). 
+For creating the Heap time complexity is O(n logn)
 
 **Max-Heap:** In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.
 
@@ -32,7 +33,7 @@ Time complexity for Insertion and Deletion is from O(1) to O(log n) and the Heig
   ### Delete element from Heap
   1. **Only root element can/should/must and only be deleted**. There is no other choice to delete any other elemen except root element
   2. Once you delete the root element, replace the root element with the last element in Binary tree
-  3. Then Adjust the root element by comparing with descendents
+  3. Then Adjust the root element by comparing with its descendents
   4. First compare Left and right children of root element and get the greater element value 
   5. Now, compare the greater element with the root element, if root element is greater, then we will be good
   6. If not, we should swap the great element with the root element
