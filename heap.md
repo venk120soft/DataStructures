@@ -7,12 +7,12 @@ Array representation of Bindary tree will be done by using below Formulas, so th
 
 Ex: 
 
-| Operation                    | Formula           | Example           |
-| -----------------------------|:-----------------:| -----------------:|
-| If a Node is at Index        | i                 | 5                 |
-| If a left child is at Index  | 2 * i             | 2 * 5 = 10        |
-| If a right child is at Index | 2 * i + 1         | 2 * 5 +1 = 10+1   |
-| If a parent is at Index      | (mod of i/2)      |  mod of 2.5 = 2   |
+| Operation                    | Formula  index at 1| Example           | Formula with index starts at 0  | 
+| -----------------------------|:------------------:|:-----------------:|:-------------------------------:| 
+| If a Node is at Index        | i                  | 5                 | i                               | 
+| If a left child is at Index  | 2 * i              | 2 * 5 = 10        | 2 * i + 1                       | 
+| If a right child is at Index | 2 * i + 1          | 2 * 5 +1 = 10+1   | 2 * i + 2                       | 
+| If a parent is at Index      | (mod of i/2)       |  mod of 2.5 = 2   | (mod of i-1/2)                  | 
 
 ## Consider below to Implement Max Heap
 Apples are arranged in the Market one top of other which
