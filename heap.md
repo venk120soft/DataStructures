@@ -211,7 +211,7 @@ Output:
 [2, 3, 4, 5, 7]
 ```
 # C# Solution
-```
+```c#
 using System;
 using System.Collections.Generic;
 using System.Text;
